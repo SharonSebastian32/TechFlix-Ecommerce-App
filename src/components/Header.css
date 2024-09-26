@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html, body{
+    font-family: Helvetica;
+   
+}
+
+.header{
+    background-color: rgb(0, 0, 0);
+    padding: 22px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+.logout-btn{
+    padding: 5px 12px;
+    background-color: rgb(255, 83, 4);
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Helvetica;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+ h1{
+    text-decoration:none;
+}
