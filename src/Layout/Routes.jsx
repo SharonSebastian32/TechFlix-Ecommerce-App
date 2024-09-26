@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/footer";
 import Home from "../components/Home/Home";
 import Logout from "../components/Logout/Logout";
- function RoutesLayout() {
+import ProductDetails from "../components/ProductDetails/productDetails";
+function RoutesLayout() {
   return (
     <>
       <Router>
@@ -12,7 +13,8 @@ import Logout from "../components/Logout/Logout";
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/logout" element={<Logout />} />
-         </Routes>
+          <Route path="/product/:id" element={<ProductDetails />} />
+        </Routes>
         <Footer />
       </Router>
     </>

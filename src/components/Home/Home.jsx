@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { getAllProducts } from "../../Apis/Api";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [products, setProducts] = useState([]); // Initialize as an empty array
@@ -33,7 +34,9 @@ const Home = () => {
               <p>
                 <span className="price">${product.price}</span>
               </p>
-              <button>Product Details</button>
+              <Link to={`/product/${product.id}`}>
+                <button>Product Details</button>
+              </Link>
             </div>
           ))
         ) : (
