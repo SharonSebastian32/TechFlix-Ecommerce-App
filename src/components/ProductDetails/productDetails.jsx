@@ -6,6 +6,9 @@ import { Link, useParams } from "react-router-dom";
 const ProductDetails = () => {
   const { id } = useParams();
   const [productDetails, setProductDetails] = useState(null);
+  const handleBuy = () => {
+    alert("Item out of stock");
+  };
 
   useEffect(() => {
     const fetchproductDetails = async () => {
@@ -31,10 +34,12 @@ const ProductDetails = () => {
           <div className="p-info">
             <h2 className="p-title">{productDetails.title}</h2>
             <p className="p-description">{productDetails.description}</p>
-            <p className="p-price">{productDetails.price}</p>
-            <button className="buy-btn">Buy Now</button>
+            <p className="p-price">RS {productDetails.price} /-</p>
+            <button className="buy-btn" onClick={handleBuy}>
+              Buy Now
+            </button>
             <Link to={"/"}>
-              <button className="redirect-btn">Redirect Home</button>
+              <button className="redirect-btn">Home</button>
             </Link>
           </div>
         </>
